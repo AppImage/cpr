@@ -5,6 +5,8 @@ cmake_minimum_required(VERSION 2.8.7)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "CMake")
 
+set(CMAKE_POSITION_INDEPENDENT_CODE true)
+
 project(cpr)
 
 if(NOT ${CMAKE_VERSION} LESS 3.2)
