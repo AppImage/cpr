@@ -39,9 +39,8 @@ endif()
 # Curl configuration
 
 if(USE_SYSTEM_CURL)
-    find_package(CURL)
-endif()
-if(NOT USE_SYSTEM_CURL OR NOT CURL_FOUND)
+    find_package(CURL REQUIRED)
+else()
     message(STATUS "Not using system Curl, using built-in curl project instead.")
     option(BUILD_CURL_TESTS "Set to ON to build cURL tests." OFF)
     option(BUILD_CURL_EXE "Set to ON to build cURL executable." OFF)
